@@ -84,7 +84,7 @@ function Homepage() {
           )}
           {visible && (
             <div className="image-container">
-              <img className="finalImage" src={downImage} />
+              <img className="finalImage" src={downImage} alt="prod-img"/>
               <a
                 className="download-link"
                 href={`https://image-uploader-at.herokuapp.com/get-image/${id}`}
