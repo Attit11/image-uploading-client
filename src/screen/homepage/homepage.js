@@ -63,11 +63,11 @@ function Homepage() {
                   let data = new FormData();
                   data.append("image", acceptedFiles.file);
                   axios
-                    .post("http://localhost:4000/upload-image", data)
+                    .post("https://image-uploader-at.herokuapp.com/upload-image", data)
                     .then((data) => {
                       console.log("DATA", data);
                       setDownImage(
-                        `http://localhost:4000/get-image/${data.data.id}`
+                        `https://image-uploader-at.herokuapp.com/get-image/${data.data.id}`
                       );
                       setId(data.data.id);
                       setLoading(false);
@@ -87,9 +87,9 @@ function Homepage() {
               <img className="finalImage" src={downImage} />
               <a
                 className="download-link"
-                href={`http://localhost:4000/get-image/${id}`}
+                href={`https://image-uploader-at.herokuapp.com/get-image/${id}`}
               >
-                http://localhost:4000/get-image/${id}
+                https://image-uploader-at.herokuapp.com/get-image/${id}
               </a>
             </div>
           )}
