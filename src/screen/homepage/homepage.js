@@ -25,11 +25,11 @@ function Homepage() {
                   let data = new FormData();
                   data.append("image", acceptedFiles[0]);
                   axios
-                    .post("http://localhost:4000/upload-image", data)
+                    .post("https://my-unsplash-at.herokuapp.com/upload-image", data)
                     .then((data) => {
                       console.log("DATA", data);
                       setDownImage(
-                        `http://localhost:4000/get-image/${data.data.id}`
+                        `https://my-unsplash-at.herokuapp.com/get-image/${data.data.id}`
                       );
                       setId(data.data.id);
                       setLoading(false);
